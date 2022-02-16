@@ -1,4 +1,4 @@
-//needed for store; singura chestie e ca daca nu am case-urile astea, nu se conecteaza la baza de date, ele fiind implementate in redux-promise-middleware - importat in store
+//used in store
 
 const INITIAL_STATE = {
     referenceList: [],
@@ -19,7 +19,7 @@ const INITIAL_STATE = {
       case 'ADD_REFERENCE_FULFILLED':
       case 'SAVE_REFERENCE_FULFILLED':
       case 'DELETE_REFERENCE_FULFILLED':
-        return { ...state, referenceList: action.payload.records, count: action.payload.count, error: null, fetching: false, fetched: true }
+        return { ...state, referenceList: action.payload, count: action.payload.count, error: null, fetching: false, fetched: true }
       case 'GET_REFERENCES_REJECTED':
       case 'ADD_REFERENCE_REJECTED':
       case 'SAVE_REFERENCE_REJECTED':
